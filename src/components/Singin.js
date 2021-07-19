@@ -29,7 +29,6 @@ const Singin = ({ check, setUserData, errmsg }) => {
           setSmall({ check: false, msg: "" });
           check("home");
         } else {
-          console.log("wrong user id password", res);
           setSmall({ check: true, msg: "wrong user id or pass word" });
         }
       });

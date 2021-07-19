@@ -34,12 +34,10 @@ const Register = ({ check, setUserData, errmsg }) => {
             setSmall({ check: false, msg: "" });
             check("home");
           } else {
-            console.log("user allredy present");
             setSmall({ check: true, msg: "email is allredy present" });
           }
         });
     } else {
-      console.log("pssword and confirm password sholud match");
       setSmall({ check: true, msg: "chek password and confirm password" });
     }
   };

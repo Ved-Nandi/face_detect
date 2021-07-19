@@ -67,7 +67,6 @@ const App = () => {
   // omsubmit function
   const onSubmit = () => {
     setSmall({ check: false, msg: "" });
-    console.log(Small);
     let body = {
       method: "post",
       headers: { "Content-Type": "application/json" },
