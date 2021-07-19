@@ -15,7 +15,7 @@ const Singin = ({ check, setUserData, errmsg }) => {
         password: password,
       }),
     };
-    fetch("http://localhost:3001/singin", bodyd)
+    fetch("https://radiant-dusk-10748.herokuapp.com/singin", bodyd)
       .then((res) => res.json())
       .then((res) => {
         if (res.id !== undefined) {

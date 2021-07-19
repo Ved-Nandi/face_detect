@@ -20,7 +20,7 @@ const Register = ({ check, setUserData, errmsg }) => {
         }),
       };
 
-      fetch("http://localhost:3001/register", bodyd)
+      fetch("https://radiant-dusk-10748.herokuapp.com/register", bodyd)
         .then((res) => res.json())
         .then((res) => {
           if (res.id !== undefined) {

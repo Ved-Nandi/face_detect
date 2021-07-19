@@ -10,6 +10,8 @@ import React, { useState } from "react";
 import Singin from "./components/Singin";
 import Register from "./components/Register";
 
+const HEROKU_URL = "https://radiant-dusk-10748.herokuapp.com/";
+
 const App = () => {
   const part = {
     particles: {
@@ -72,7 +74,7 @@ const App = () => {
       body: JSON.stringify({ imgurl }),
     };
     // fetching clarifai data
-    fetch("http://localhost:3001/clarifai", body)
+    fetch(HEROKU_URL + "clarifai", body)
       .then((data) => data.json())
       .then((res) => disbox(calFace(res)))
       .catch((err) => setSmall({ check: true, msg: "check url" }));
@@ -85,7 +87,7 @@ const App = () => {
       body: JSON.stringify({ id: userData.id }),
     };
 
-    fetch("http://localhost:3001/image", bodyD)
+    fetch(HEROKU_URL + "image", bodyD)
       .then((data) => data.json())
       .then((data) => {
         setUserData(Object.assign(userData, { entries: data }));
