@@ -1,4 +1,4 @@
-const Singin = ({ check, setUserData, errmsg }) => {
+const Singin = ({ check, setUserData, errmsg, load }) => {
   const { Small, setSmall } = errmsg;
 
   const onSingin = (event) => {
@@ -7,6 +7,7 @@ const Singin = ({ check, setUserData, errmsg }) => {
     if (!email && !password) {
       return setSmall({ check: true, msg: "all filds are required" });
     }
+    load(true);
     const bodyd = {
       method: "post",
       headers: { "Content-Type": "application/json" },
@@ -19,6 +20,8 @@ const Singin = ({ check, setUserData, errmsg }) => {
       .then((res) => res.json())
       .then((res) => {
         if (res.id !== undefined) {
+          load(false);
+          check("home");
           setUserData({
             id: res.id,
             name: res.name,
@@ -27,8 +30,8 @@ const Singin = ({ check, setUserData, errmsg }) => {
             joined: res.joined,
           });
           setSmall({ check: false, msg: "" });
-          check("home");
         } else {
+          load(false);
           setSmall({ check: true, msg: "wrong user id or pass word" });
         }
       });

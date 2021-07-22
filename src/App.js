@@ -9,6 +9,7 @@ import "./App.css";
 import React, { useState } from "react";
 import Singin from "./components/Singin";
 import Register from "./components/Register";
+import Loading from "./components/loading";
 
 const HEROKU_URL = "https://radiant-dusk-10748.herokuapp.com/";
 
@@ -30,6 +31,7 @@ const App = () => {
   const [Box, setBox] = useState([]);
   const [Rout, setRout] = useState("Login");
   const [Small, setSmall] = useState({ check: false, msg: "" });
+  const [Load, setLoad] = useState(false);
 
   const [userData, setUserData] = useState({
     id: 0,
@@ -107,6 +109,7 @@ const App = () => {
           check={rout_change}
           setUserData={setUserData}
           errmsg={{ Small, setSmall }}
+          load={setLoad}
         />
       ) : Rout === "register" ? (
         <div>
@@ -120,6 +123,7 @@ const App = () => {
             check={rout_change}
             setUserData={setUserData}
             errmsg={{ Small, setSmall }}
+            load={setLoad}
           />
         </div>
       ) : (
@@ -136,6 +140,7 @@ const App = () => {
           <Face box={Box} imgurl={Iurl} />
         </div>
       )}
+      <Loading Load={Load} />
     </div>
   );
 };

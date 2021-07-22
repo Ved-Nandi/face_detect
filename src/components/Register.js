@@ -1,5 +1,7 @@
-const Register = ({ check, setUserData, errmsg }) => {
+const Register = ({ check, setUserData, errmsg, load }) => {
   const { Small, setSmall } = errmsg;
+
+  //on register function
   const onRegister = (event) => {
     const password = document.getElementById("password").value;
     const email = document.getElementById("email").value;
@@ -10,6 +12,7 @@ const Register = ({ check, setUserData, errmsg }) => {
       return setSmall({ check: true, msg: "all fildes are required" });
     }
     if (password === cpassword) {
+      load(true);
       const bodyd = {
         method: "post",
         headers: { "Content-Type": "application/json" },
@@ -24,6 +27,8 @@ const Register = ({ check, setUserData, errmsg }) => {
         .then((res) => res.json())
         .then((res) => {
           if (res.id !== undefined) {
+            load(false);
+            check("home");
             setUserData({
               id: res.id,
               name: res.name,
@@ -32,10 +37,14 @@ const Register = ({ check, setUserData, errmsg }) => {
               joined: res.joined,
             });
             setSmall({ check: false, msg: "" });
-            check("home");
           } else {
+            load(false);
             setSmall({ check: true, msg: "email is allredy present" });
           }
+        })
+        .catch(() => {
+          load(false);
+          setSmall({ check: true, msg: "email is allredy present" });
         });
     } else {
       setSmall({ check: true, msg: "chek password and confirm password" });
