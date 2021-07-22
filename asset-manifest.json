@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/face_detect/static/css/main.4d4517e3.chunk.css",
-    "main.js": "/face_detect/static/js/main.2b05f0e4.chunk.js",
-    "main.js.map": "/face_detect/static/js/main.2b05f0e4.chunk.js.map",
-    "runtime-main.js": "/face_detect/static/js/runtime-main.30bf1203.js",
-    "runtime-main.js.map": "/face_detect/static/js/runtime-main.30bf1203.js.map",
+    "main.css": "/face_detect/static/css/main.7aa0131c.chunk.css",
+    "main.js": "/face_detect/static/js/main.8ff1ad4a.chunk.js",
+    "main.js.map": "/face_detect/static/js/main.8ff1ad4a.chunk.js.map",
+    "runtime-main.js": "/face_detect/static/js/runtime-main.cce51ae0.js",
+    "runtime-main.js.map": "/face_detect/static/js/runtime-main.cce51ae0.js.map",
     "static/css/2.c1f4f5f4.chunk.css": "/face_detect/static/css/2.c1f4f5f4.chunk.css",
-    "static/js/2.4b24691e.chunk.js": "/face_detect/static/js/2.4b24691e.chunk.js",
-    "static/js/2.4b24691e.chunk.js.map": "/face_detect/static/js/2.4b24691e.chunk.js.map",
-    "static/js/3.01bb3fae.chunk.js": "/face_detect/static/js/3.01bb3fae.chunk.js",
-    "static/js/3.01bb3fae.chunk.js.map": "/face_detect/static/js/3.01bb3fae.chunk.js.map",
+    "static/js/2.5ae59ab6.chunk.js": "/face_detect/static/js/2.5ae59ab6.chunk.js",
+    "static/js/2.5ae59ab6.chunk.js.map": "/face_detect/static/js/2.5ae59ab6.chunk.js.map",
+    "static/js/3.b12472de.chunk.js": "/face_detect/static/js/3.b12472de.chunk.js",
+    "static/js/3.b12472de.chunk.js.map": "/face_detect/static/js/3.b12472de.chunk.js.map",
     "index.html": "/face_detect/index.html",
     "static/css/2.c1f4f5f4.chunk.css.map": "/face_detect/static/css/2.c1f4f5f4.chunk.css.map",
-    "static/css/main.4d4517e3.chunk.css.map": "/face_detect/static/css/main.4d4517e3.chunk.css.map",
-    "static/js/2.4b24691e.chunk.js.LICENSE.txt": "/face_detect/static/js/2.4b24691e.chunk.js.LICENSE.txt"
+    "static/css/main.7aa0131c.chunk.css.map": "/face_detect/static/css/main.7aa0131c.chunk.css.map",
+    "static/js/2.5ae59ab6.chunk.js.LICENSE.txt": "/face_detect/static/js/2.5ae59ab6.chunk.js.LICENSE.txt",
+    "static/media/spin.9a5bb25c.svg": "/face_detect/static/media/spin.9a5bb25c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.30bf1203.js",
+    "static/js/runtime-main.cce51ae0.js",
     "static/css/2.c1f4f5f4.chunk.css",
-    "static/js/2.4b24691e.chunk.js",
-    "static/css/main.4d4517e3.chunk.css",
-    "static/js/main.2b05f0e4.chunk.js"
+    "static/js/2.5ae59ab6.chunk.js",
+    "static/css/main.7aa0131c.chunk.css",
+    "static/js/main.8ff1ad4a.chunk.js"
   ]
 }
